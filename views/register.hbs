@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="path/to/your/custom.css">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <style>
+        form {
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 20px; /* Adjusted padding */
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 10px; /* Adjusted margin */
+        }
+
+        .input-box {
+            margin-bottom: 15px; /* Adjusted margin */
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        h3 a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        h3 a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <form method="POST">
+        <h2><b>Registration Form</b></h2>
+        {{#if errorMessage}}
+        <p style="color: red;">{{ errorMessage }}</p>
+        {{/if}}
+        <div class="input-box">
+            <label for="firstname">First Name</label>
+            <input name="firstname" type="text" required>
+        </div>
+        <div class="input-box">
+            <label for="lastname">Last Name</label>
+            <input name="lastname" type="text" required>
+        </div>
+        <div class="input-box">
+            <label for="username">Email</label>
+            <input name="username" type="text" required>
+        </div>
+        <div class="input-box">
+            <label for="password">Password</label>
+            <input name="password" type="password" required>
+        </div>
+
+        <button>Register</button><br>
+        <div style="text-align: center;">
+            Already have an account?
+            <a href="/login" title="Register">
+                Login
+            </a></div>
+    </form>
+</body>
+
+</html>

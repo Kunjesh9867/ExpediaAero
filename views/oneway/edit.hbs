@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Document metadata -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+
+    <!-- External stylesheet link -->
+    <link rel="stylesheet" href="path/to/your/custom.css">
+
+    <!-- Internal styles -->
+    <style>
+
+       
+        /* General styling */
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        fieldset {
+            border: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        /* Style for form labels */
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        /* Style for form input fields */
+        input {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        /* Style for the Save button */
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        /* Hover effect for the Save button */
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Additional styling for a secondary button */
+        .btn-primary {
+            margin-top: 10px;
+        }
+
+        
+    
+    </style>
+</head>
+
+<body>
+    <!-- Page title -->
+    <h1>Edit</h1>
+
+    <!-- Form for data input -->
+    <form method="post">
+        <fieldset>
+            <!-- Input fields for various data -->
+            <input name="time" placeholder="Time" id="time" required />
+            <input name="nonstop" placeholder="Total Trip" id="nonstop" required />
+            <input name="price" placeholder="Price" id="price" required />
+            <input name="city" placeholder="City" id="city" required />
+            <input name="date" placeholder="Date" id="date" required />
+            <input name="flight" placeholder="Flight" id="flight" required />
+        </fieldset>
+
+        <!-- Save button -->
+        <button class="btn btn-primary">Save</button>
+    </form>
+
+<p>&nbsp;</p>
+     
+</body>
+
+</html>

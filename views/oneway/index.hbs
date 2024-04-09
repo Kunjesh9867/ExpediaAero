@@ -1,0 +1,160 @@
+<!-- FILEPATH -->
+<!-- This code represents a selection of code that needs documentation. -->
+<!-- Please add appropriate documentation comments here. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Document metadata -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <!-- Internal styles -->
+  <style>
+    /* Global body styling */
+    body {
+      /* Uncomment the following line to change font family */
+      /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+     
+    }
+
+
+  
+
+    /* Styling for the search form */
+    .search-form {
+      display: flex;
+      margin-top: 20px;
+    }
+
+    .search-input {
+      padding: 10px;
+      font-size: 25px;
+      border: 1px solid #ccc;
+      border-radius: 5px 0 0 5px;
+      outline: none;
+      width: 500px;
+    }
+
+    .search-button {
+      background-color: purple;
+      color: #fff;
+      border: 1px solid purple;
+      padding: 10px 15px;
+      border-radius: 0 5px 5px 0;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      width: 100px;
+      text-align: center;
+    }
+
+    .search-button:hover {
+      background-color: darkblue;
+    }
+    .searchbtn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 15vh;
+    }
+    
+    /*! CARD*/
+    .container {
+       font-weight: 500;
+       max-width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  }
+
+    .card {
+      width: 400px;
+      margin: 15px;
+      background-color: #fff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+
+    .card-content {
+      padding: 20px;
+    }
+
+    .card-title {
+      font-size: 1.5rem;
+
+        {
+          {
+          !-- margin-bottom: 10px;
+          --
+        }
+      }
+    }
+
+    .card-text {
+      color: #555;
+    }
+
+    .card-btn {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      text-align: center;
+      background-color: #007bff;
+      color: #fff;
+      text-decoration: none;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .city{
+      text-align: center;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .airline, .price, .date, .time, .nonstop{
+      margin-left: 20px;
+      /*Make it more attractive*/
+      font-size: large; 
+
+    }
+    
+  </style>
+</head>
+
+<body>
+  <!-- Search form -->
+  <div class="searchbtn">
+    <form action="" class="search-form">
+      <input type="text" placeholder="Search by City [ YYZ, Toronto, ATH ]" name="search" class="search-input">
+      <button type="submit" class="search-button">Search</button>
+    </form>
+  </div>
+
+
+  <div class="container">
+    {{#each dataset}}
+    <section>
+    <div class="card">
+      <div class="card-content">
+        <div class="city">{{this.city}}</div>
+        <div class="airline">● <b>Airline:</b> {{this.flight}}</div>
+        <div class="price">● <b>Price:</b> CA ${{this.price}}</div>
+        <div class="date">● <b>Date:</b> {{this.date}}</div>
+        <div class="time">● <b>Time:</b> {{this.time}}</div>
+        <div class="nonstop">● <b>Extra:</b> {{this.nonstop}}</div><br>
+      </div>
+    </div>
+    </section>
+    {{/each}}
+
+
+  </div>
+</body>
+
+</html>

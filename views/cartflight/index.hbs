@@ -1,0 +1,183 @@
+<!-- FILEPATH -->
+<!-- This code represents a selection of code that needs documentation. -->
+<!-- Please add appropriate documentation comments here. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Document metadata -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <!-- Internal styles -->
+  <style>
+    /* Global body styling */
+    body {
+      /* Uncomment the following line to change font family */
+      /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+     
+    }
+
+
+  
+
+    /* Styling for the search form */
+    .search-form {
+      display: flex;
+      margin-top: 20px;
+    }
+
+    .search-input {
+      padding: 10px;
+      font-size: 25px;
+      border: 1px solid #ccc;
+      border-radius: 5px 0 0 5px;
+      outline: none;
+      width: 500px;
+    }
+
+    .search-button {
+      background-color: purple;
+      color: #fff;
+      border: 1px solid purple;
+      padding: 10px 15px;
+      border-radius: 0 5px 5px 0;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      width: 100px;
+      text-align: center;
+    }
+
+    .search-button:hover {
+      background-color: darkblue;
+    }
+    .searchbtn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 15vh;
+    }
+    
+    /*! CARD*/
+    .container {
+       font-weight: 500;
+       max-width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  }
+
+    .card {
+      width: 400px;
+      margin: 15px;
+      background-color: #fff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+
+    .card-content {
+      padding: 20px;
+    }
+
+    .card-title {
+      font-size: 1.5rem;
+
+        {
+          {
+          !-- margin-bottom: 10px;
+          --
+        }
+      }
+    }
+
+    .card-text {
+      color: #555;
+    }
+
+    .card-btn {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      text-align: center;
+      background-color: red;
+      color: #fff;
+      text-decoration: none;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .card-btn:hover {
+      color: black;
+    }
+
+    .city{
+      text-align: center;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .airline, .price, .date, .time, .nonstop{
+      margin-left: 20px;
+      /*Make it more attractive*/
+      font-size: large; 
+
+    }
+     .div-pay{
+            width: 20px;
+            padding-left: 47%;
+        }
+
+        .div-pay a:hover{
+            text-decoration: none;
+            color: wheat;
+        }
+        .pay {
+            background-color:blueviolet; /* Green */
+            border:2px solid wheat ;
+            color: white;
+            width: 100px;
+            padding: 5px 10px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 20px
+            
+        }
+    
+  </style>
+</head>
+
+<body>
+  <h1 style="text-align: center; padding-top:5px; color:orange">Welcome To CART</h1>
+
+    {{#if user}}
+
+  <div class="container">
+    {{#each dataset}}
+    <section>
+    <div class="card">
+      <div class="card-content">
+        <div class="city">{{this.city}}</div>
+        <div class="airline">● <b>Airline:</b> {{this.flight}}</div>
+        <div class="price">● <b>Price:</b> CA ${{this.price}}</div>
+        <div class="date">● <b>Date:</b> {{this.date}}</div>
+        <div class="time">● <b>Time:</b> {{this.time}}</div>
+        <div class="nonstop">● <b>Extra:</b> {{this.nonstop}}</div><br>
+        <a href="/cart/delete/{{this._id}}" class="card-btn">Delete</a>
+      </div>
+    </div>
+    </section>
+    {{/each}}
+    {{/if}}
+</div><br><br>
+
+<div class="div-pay">
+    <a href="/payment" class="pay">Payment</a>
+</div><br><br>
+</body>
+
+</html>
